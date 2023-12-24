@@ -26,8 +26,9 @@ def colorize_spanish_words(paragraph, spanish_text):
         colorize_word(run, token.pos_)
 
 if __name__ == "__main__":
-    # Get user input
-    input_text = "This is a text. He eats an apple."
+    # Read text from a file
+    with open('input.txt', 'r', encoding='utf-8') as file:
+        input_text = file.read()
 
     # Create a Word document
     doc = Document()
